@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Validate email</title>
+</head>
+
+<body>
+    <script>
+        function isEmail(str) {
+            let regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+            if (regexp.test(str)) {
+                return 'Email hợp lệ';
+            } else {
+                return 'Email không hợp lệ'
+            }
+        }
+        const validEmail = [
+            'a@gmail.com',
+            'ab@yahoo.com',
+            'abc@hotmail.com'
+        ]
+        const invalidEmail = [
+            '@gmail.com',
+            'ab@gmail.',
+            '@#abc@gmail.com'
+        ]
+        document.write('Email hợp lệ: <br />')
+        validEmail.forEach((email) => {
+            document.write(`${email}: ${isEmail(email)}<br />`)
+        })
+        document.write('<br />Email không hợp lệ: <br />')
+        invalidEmail.forEach((email) => {
+            document.write(`${email}: ${isEmail(email)}<br />`)
+        })
+    </script>
+</body>
+
+</html>

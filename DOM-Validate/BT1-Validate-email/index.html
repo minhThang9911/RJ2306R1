@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Validate account</title>
+</head>
+
+<body>
+    <script>
+        function isAccount(str) {
+            let regexp = /^[_a-z0-9]{6,}$/;
+            if (regexp.test(str)) {
+                return 'Account hợp lệ';
+            } else {
+                return 'Account không hợp lệ'
+            }
+        }
+        const validAccounts = [
+            '123abc_',
+            '_abc123',
+            '______',
+            '123456',
+            'abcdefg'
+        ]
+        const invalidAccounts = [
+            '.@',
+            '12345',
+            '1234_',
+            'abcde '
+        ]
+        document.write('Account hợp lệ: <br />')
+        validAccounts.forEach((account) => {
+            document.write(`${account}: ${isAccount(account)} <br />`)
+        })
+        document.write('<br />Account không hợp lệ: <br />')
+        invalidAccounts.forEach((account) => {
+            document.write(`${account}: ${isAccount(account)} <br />`)
+        })
+    </script>
+</body>
+
+</html>
