@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Sử dụng Set thao tác với dữ liệu</title>
+</head>
+
+<body>
+    <h1>Mô tả bài toán</h1>
+    <p>Peter cần quản lý danh sách động vật trong sở thú, đôi khi cần thêm 1 loài vật mới vào danh sách, đôi khi cần
+        kiểm tra xem loài vật mới đã có trong danh sách chưa, có lúc thì cần xóa một loài động vật khỏi danh sách quản
+        lý của sở thú. Ngoài ra khi có đoàn kiểm tra tới, Peter cần in ra danh sách các loài động vật hiện đang có trong
+        sở thú.</p>
+
+    <input id="animal-type" placeholder="Nhập loài vật">
+    <input type="button" id="add-btn" value="THÊM">
+    <input type="button" id="check-btn" value="KIỂM TRA">
+    <input type="button" id="remove-btn" value="XÓA">
+    <input type="button" id="list-btn" value="DANH SÁCH ĐỘNG VẬT">
+    <p>Sanh sách các loài động vật hiện đang có:</p>
+    <ol id="animate-list"></ol>
+    <script>
+        const input = document.getElementById('animal-type')
+        const animalList = document.getElementById('animate-list')
+        const animalSpecies = new Set(JSON.parse(localStorage.getItem('animalList')))
+        const add = (animalType) => {
+            if (animalSpecies.has(animalType)) {
+                alert("Loài vật đã có trong danh sách!")
+            } else {
+                animalSpecies.add(animalType)
+            }
+        }
+        const check = (animalType) => {
+            let isExist = animalSpecies.has(animalType)
+            let msg = "Loài vật không có trong danh sách!"
+            if (isExist) {
+                msg = "Loài vật có trong danh sách!"
+            }
+            alert(msg)
+        }
+        const remove = (animalType) => {
+            if (animalSpecies.delete(animalType)) {
+                alert("Đã xóa loài vật khỏi danh sách!")
+            } else {
+                alert("Loài vật không có trong danh sách!")
+            }
+        }
+        const getHtmlAnimalSpeciesList = () => [...animalSpecies].map(animalType => `
+        <li>${animalType}</li>
+        `).join('')
+        const checkNotEmpty = (f) => {
+            if (input.value) {
+                f(input.value)
+                animalList.innerHTML = getHtmlAnimalSpeciesList()
+                localStorage.setItem('animalList', JSON.stringify([...animalSpecies]))
+            }
+        }
+        document.getElementById('add-btn').onclick = () => { checkNotEmpty(add) }
+        document.getElementById('check-btn').onclick = () => { checkNotEmpty(check) }
+        document.getElementById('remove-btn').onclick = () => { checkNotEmpty(remove) }
+        document.getElementById('list-btn').onclick = () => { animalList.innerHTML = getHtmlAnimalSpeciesList() }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Sử dụng static trong ES6</title>
+</head>
+
+<body>
+    <script>
+        class Info {
+            name
+            description
+            triple(x = 1) {
+                return x * 3
+            }
+        }
+        class Geometry extends Info {
+            length
+            calc(x = 1) {
+                return x
+            }
+        }
+
+        const square = new Geometry()
+        square.name = 'Square'
+        square.description = 'a plane figure with four equal straight sides and four right angles'
+        square.length = 10
+        console.log(square)
+        console.log(square.triple(3))
+        console.log(square.calc(3))
+    </script>
+</body>
+
+</html>

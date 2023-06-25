@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Sử dụng Getter và Setter trong ES6</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            #name
+            constructor(name) {
+                this.#name = name
+            }
+            setName(name) {
+                this.#name = name
+            }
+            getName() {
+                return this.#name
+            }
+            walk() {
+                console.log('walking.....')
+            }
+        }
+
+        class Programmer extends Person {
+            #language
+            constructor(name) {
+                super(name)
+            }
+            setLanguage(language) {
+                this.#language = language
+            }
+            getLanguage() {
+                return this.#language
+            }
+            writeCode() {
+                console.log('Writing code.....')
+            }
+        }
+
+        const a = new Programmer('Nguyen Van A')
+        console.log(a)
+        a.setName('Nguyen Van B')
+        console.log(a.getName())
+        a.walk()
+        a.setLanguage('JavaScript')
+        console.log(a.getLanguage())
+        a.writeCode()
+        console.log(a)
+    </script>
+</body>
+
+</html>
