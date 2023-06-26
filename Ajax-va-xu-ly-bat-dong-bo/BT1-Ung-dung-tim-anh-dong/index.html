@@ -204,8 +204,6 @@
             resultBox.innerHTML = ""
         }
         function search() {
-
-            console.log(createRequest())
             axios.get(createRequest())
                 .then((response) => {
                     if (response.status === 200) {

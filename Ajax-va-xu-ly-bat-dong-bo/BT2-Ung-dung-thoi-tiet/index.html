@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[Bài tập] Xây dựng ứng dụng thông tin thời tiết</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -12,11 +13,23 @@
         //api key = ee28afe45d0af688efc6e90041910bc3
         //http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}
         //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units={metric/imperial}&lang={}&appid={API key}
-        const apiKey = 'ee28afe45d0af688efc6e90041910bc3'
-        const createLocationToGeoCoding = (city) => `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`
         const apiConfig = {
-            lat
+            lat: 0,
+            lon: 0,
+            units: 'metric',
+            lang: 'vi',
+            apiKey: 'ee28afe45d0af688efc6e90041910bc3'
         }
+        const createLocationToGeoCodingRequest = (city) => `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiConfig.apiKey}`
+        const createWetherRequest = () => `https://api.openweathermap.org/data/2.5/weather?lat=${apiConfig.lat}&lon=${apiConfig.lon}&units=${apiConfig.units}&lang=${apiConfig.lang}&appid=${apiConfig.apiKey}`
+
+        axios.get(createLocationToGeoCodingRequest("London"))
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
     </script>
 </body>
 
