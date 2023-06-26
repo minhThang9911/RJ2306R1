@@ -4,36 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Bài tập] Validate email</title>
+    <title>[Bài tập] Validate account</title>
 </head>
 
 <body>
     <script>
-        function isEmail(str) {
-            let regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+        function isAccount(str) {
+            let regexp = /^[_a-z0-9]{6,}$/;
             if (regexp.test(str)) {
-                return 'Email hợp lệ';
+                return 'Account hợp lệ';
             } else {
-                return 'Email không hợp lệ'
+                return 'Account không hợp lệ'
             }
         }
-        const validEmail = [
-            'a@gmail.com',
-            'ab@yahoo.com',
-            'abc@hotmail.com'
+        const validAccounts = [
+            '123abc_',
+            '_abc123',
+            '______',
+            '123456',
+            'abcdefg'
         ]
-        const invalidEmail = [
-            '@gmail.com',
-            'ab@gmail.',
-            '@#abc@gmail.com'
+        const invalidAccounts = [
+            '.@',
+            '12345',
+            '1234_',
+            'abcde '
         ]
-        document.write('Email hợp lệ: <br />')
-        validEmail.forEach((email) => {
-            document.write(`${email}: ${isEmail(email)}<br />`)
+        document.write('Account hợp lệ: <br />')
+        validAccounts.forEach((account) => {
+            document.write(`${account}: ${isAccount(account)} <br />`)
         })
-        document.write('<br />Email không hợp lệ: <br />')
-        invalidEmail.forEach((email) => {
-            document.write(`${email}: ${isEmail(email)}<br />`)
+        document.write('<br />Account không hợp lệ: <br />')
+        invalidAccounts.forEach((account) => {
+            document.write(`${account}: ${isAccount(account)} <br />`)
         })
     </script>
 </body>

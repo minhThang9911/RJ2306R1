@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Xây dựng ứng dụng thông tin thời tiết</title>
+</head>
+
+<body>
+    <script>
+        //api key = ee28afe45d0af688efc6e90041910bc3
+        //http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}
+        //https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units={metric/imperial}&lang={}&appid={API key}
+        const apiKey = 'ee28afe45d0af688efc6e90041910bc3'
+        const createLocationToGeoCoding = (city) => `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`
+        const apiConfig = {
+            lat
+        }
+    </script>
+</body>
+
+</html>
