@@ -30,14 +30,14 @@
             constructor(name) {
                 super(name)
             }
-            setLanguage(language) {
+            set language(language) {
                 this.#_language = language
             }
-            getLanguage() {
+            get language() {
                 return this.#_language
             }
             writeCode() {
-                console.log('Writing code.....')
+                console.log('Writing code.....' + this.#_language)
             }
         }
 
