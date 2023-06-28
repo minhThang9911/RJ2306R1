@@ -1,0 +1,30 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/JSX/th1-nhung-ten-vao-react/node_modules
+/JSX/th2-tao-element-danh-sach-loai-qua/node_modules
+/JSX/th3-hien-thi-thoi-gian/node_modules
+/JSX-2/bt1-thong-tin-trinh-duyet/node_modules
+/JSX-2/bt2-bang-thong-tin-sinh-vien/node_modules
+/JSX-2/bt3-profile-card/node_modules
+/JSX-2/bt4-signin-form/node_modules
