@@ -10,15 +10,15 @@
 <body>
     <script>
         class Person {
-            #name
+            #_name
             constructor(name) {
-                this.#name = name
+                this.#_name = name
             }
-            setName(name) {
-                this.#name = name
+            set name(name) {
+                this.#_name = name
             }
-            getName() {
-                return this.#name
+            get name() {
+                return this.#_name
             }
             walk() {
                 console.log('walking.....')
@@ -26,15 +26,15 @@
         }
 
         class Programmer extends Person {
-            #language
+            #_language
             constructor(name) {
                 super(name)
             }
             setLanguage(language) {
-                this.#language = language
+                this.#_language = language
             }
             getLanguage() {
-                return this.#language
+                return this.#_language
             }
             writeCode() {
                 console.log('Writing code.....')
@@ -43,11 +43,11 @@
 
         const a = new Programmer('Nguyen Van A')
         console.log(a)
-        a.setName('Nguyen Van B')
-        console.log(a.getName())
+        a.name = 'Nguyen Van B'
+        console.log(a.name)
         a.walk()
-        a.setLanguage('JavaScript')
-        console.log(a.getLanguage())
+        a.language = 'JavaScript'
+        console.log(a.language)
         a.writeCode()
         console.log(a)
     </script>
