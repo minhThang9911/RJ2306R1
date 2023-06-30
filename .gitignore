@@ -28,3 +28,5 @@ yarn-error.log*
 /JSX-2/bt2-bang-thong-tin-sinh-vien/node_modules
 /JSX-2/bt3-profile-card/node_modules
 /JSX-2/bt4-signin-form/node_modules
+/React-Components/bt1-alert-component/node_modules
+/React-Components/bt2-component-danh-sach-sinh-vien/node_modules
