@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function atLeastTwo(arr, callback) {
+            return arr.filter(callback).length >= 2
+        }
+        function isOdd(num) {
+            return num % 2 !== 0
+        }
+        console.log(atLeastTwo([1, 2, 3, 4, 5], isOdd))
+        console.log(atLeastTwo([1, 2, 4, 6], isOdd))
+        console.log(atLeastTwo([1, 2, 3, 4, 5], t => t > 3))
+    </script>
+</body>
+
+</html>

@@ -30,3 +30,8 @@ yarn-error.log*
 /JSX-2/bt4-signin-form/node_modules
 /React-Components/bt1-alert-component/node_modules
 /React-Components/bt2-component-danh-sach-sinh-vien/node_modules
+/State-Lifecycle/bt1-component-expland-collapse/node_modules
+/State-Lifecycle/bt2-may-tinh-don-gian/node_modules
+/State-Lifecycle/bt3-su-kien-login-logout/node_modules
+/State-Lifecycle/bt4-todo-app/node_modules
+/State-Lifecycle/bt5-ung-dung-quan-ly-hoc-sinh/node_modules
