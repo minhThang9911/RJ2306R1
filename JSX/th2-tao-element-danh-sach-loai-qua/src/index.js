@@ -15,8 +15,8 @@ root.render(
     <div>
         <h1>List of fruits</h1>
         <ul>
-            {fruits.map((item) => (
-                <li>{item}</li>
+            {fruits.map((item, index) => (
+                <li key={index}>{item}</li>
             ))}
         </ul>
     </div>
