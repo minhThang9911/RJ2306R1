@@ -203,14 +203,11 @@
         function removeImgs() {
             resultBox.innerHTML = ""
         }
-        function search() {
-            axios.get(createRequest())
-                .then((response) => {
-                    if (response.status === 200) {
-                        return response.data.data
-                    }
-                })
-                .then((result) => {
+        async function search() {
+            try {
+                const response = await axios.get(createRequest())
+                if (response.status === 200) {
+                    const result = response.data.data
                     let index = 0
                     const intevalId = setInterval(() => {
                         displayImg(result[index])
@@ -219,11 +216,31 @@
                             clearInterval(intevalId)
                         }
                     }, 230)
+                }
+            } catch (e) {
+                console.log(e)
+            }
 
-                })
-                .catch((error) => {
-                    console.log(error)
-                })
+            // axios.get(createRequest())
+            //     .then((response) => {
+            //         if (response.status === 200) {
+            //             return response.data.data
+            //         }
+            //     })
+            //     .then((result) => {
+            //         let index = 0
+            //         const intevalId = setInterval(() => {
+            //             displayImg(result[index])
+            //             index++
+            //             if (index == result.length) {
+            //                 clearInterval(intevalId)
+            //             }
+            //         }, 230)
+
+            //     })
+            //     .catch((error) => {
+            //         console.log(error)
+            //     })
         }
 
         function displayImg(imgObj) {
