@@ -39,3 +39,5 @@ yarn-error.log*
 /Hook/bt2-timer/node_modules
 /Hook/bt3-counter/node_modules
 /JSX/bt4-hien-thi-thoi-gian/node_modules
+/React-Components/th1-su-dung-props/node_modules
+/React-Components/th3-xay-dung-function-component/node_modules
