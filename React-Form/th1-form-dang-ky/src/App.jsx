@@ -1,12 +1,16 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import "./App.css";
+
 export default function App() {
     const [form, setForm] = useState({});
+
     function handleChange(event) {
         setForm({
             ...form,
             [event.target.name]: event.target.value,
         });
     }
+
     function handleSubmit() {
         const isValid =
             form.username &&
@@ -17,6 +21,7 @@ export default function App() {
             isValid ? "Sign in success!!!" : "Please fill out all the fields!!!"
         );
     }
+
     return (
         <div>
             <h1>Sign up</h1>

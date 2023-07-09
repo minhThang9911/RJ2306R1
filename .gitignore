@@ -41,3 +41,8 @@ yarn-error.log*
 /JSX/bt4-hien-thi-thoi-gian/node_modules
 /React-Components/th1-su-dung-props/node_modules
 /React-Components/th3-xay-dung-function-component/node_modules
+/cache
+/React-Form/th1-form-dang-ky/node_modules
+/React-Form/th2-validate-form-dang-ky/node_modules
+/React-Form/th3-validate-form-login/node_modules
+/React-Form/th4-validate-form-login-formik/node_modules
