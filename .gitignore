@@ -53,3 +53,5 @@ yarn-error.log*
 /API-Clients/th4-hien-loading-promise/node_modules
 /API-Clients/th5-hien-loading-async/node_modules
 /API-Clients/th6-lay-danh-sach-user-axio/node_modules
+/API-Clients/bt1-todo-list/node_modules
+/API-Clients/bt2-quan-ly-sach/node_modules

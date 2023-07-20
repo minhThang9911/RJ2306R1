@@ -1,18 +1,53 @@
-import { Route, Routes } from "react-router-dom";
-import Login from "./components/Login";
-import Home from "./components/Home";
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function App() {
-    return (
-        <Routes>
-            <Route
-                path="/"
-                element={<Login />}
-            />
-            <Route
-                path="/home"
-                element={<Home />}
-            />
-        </Routes>
-    );
+	const [task, setTask] = useState("");
+	const [taskList, setTaskList] = useState([]);
+
+	useEffect(() => {
+		(async () => {
+			const res = await axios.get(
+				"https://jsonplaceholder.typicode.com/todos"
+			);
+			setTaskList(res.data);
+		})();
+	}, []);
+
+	const handleChange = (e) => {
+		setTask(e.target.value);
+	};
+	const handleSubmit = () => {
+		(async () => {
+			const res = await axios.post(
+				"https://jsonplaceholder.typicode.com/todos",
+				{
+					id: taskList.length,
+					title: task,
+				}
+			);
+			if (res.status === 201) {
+				setTaskList((prev) => [...prev, res.data]);
+			}
+
+			console.log(res);
+		})();
+	};
+	return (
+		<div>
+			<h2>Todo List</h2>
+			<p>
+				<input name="task" onChange={handleChange} value={task} />
+			</p>
+			<p>
+				<button onClick={handleSubmit}>Submit</button>
+			</p>
+			<ul>
+				{taskList.map((task, index) => (
+					<li key={index}>{task.title}</li>
+				))}
+			</ul>
+		</div>
+	);
 }
