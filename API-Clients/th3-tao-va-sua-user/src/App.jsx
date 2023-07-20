@@ -1,18 +1,16 @@
-import { Route, Routes } from "react-router-dom";
-import Login from "./components/Login";
-import Home from "./components/Home";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Users from "./pages/Users";
+import UserDetails from "./pages/UserDetails";
 
 export default function App() {
-    return (
-        <Routes>
-            <Route
-                path="/"
-                element={<Login />}
-            />
-            <Route
-                path="/home"
-                element={<Home />}
-            />
-        </Routes>
-    );
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Users />} />
+				<Route path={"/user/add"} element={<UserDetails />} />
+				<Route path={"/user/:userId"} element={<UserDetails />} />
+			</Routes>
+		</BrowserRouter>
+	);
 }

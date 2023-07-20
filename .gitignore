@@ -48,3 +48,8 @@ yarn-error.log*
 /React-Form/th4-validate-form-login-formik/node_modules
 /API-Clients/th2-lay-danh-sach-user/node_modules
 /Router/bt1-router-1/node_modules
+/API-Clients/th3-tao-va-sua-user/node_modules
+/API-Clients/th1-mock-api/node_modules
+/API-Clients/th4-hien-loading-promise/node_modules
+/API-Clients/th5-hien-loading-async/node_modules
+/API-Clients/th6-lay-danh-sach-user-axio/node_modules
