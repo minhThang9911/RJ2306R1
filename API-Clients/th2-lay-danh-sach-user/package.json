@@ -1,11 +1,12 @@
 {
-    "name": "bt1-router-1",
+    "name": "th2-lay-danh-sach-user",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.14.1",
         "@testing-library/react": "^13.0.0",
         "@testing-library/user-event": "^13.2.1",
+        "axios": "^1.4.0",
         "formik": "^2.4.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
