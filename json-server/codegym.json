@@ -1,25 +1,78 @@
 {
-    "contacts": [
-        {
-            "id": 1,
-            "name": "Peter",
-            "image": "https://i0.wp.com/thatnhucuocsong.com.vn/wp-content/uploads/2023/02/Hinh-anh-avatar-Facebook.jpg?ssl=1",
-            "email": "peter@gmail.com",
-            "phone": "0912123109"
-        },
-        {
-            "id": 2,
-            "name": "Richard",
-            "image": "https://antimatter.vn/wp-content/uploads/2023/01/hinh-anh-avatar-dep-cute-ngau-601x600.jpg",
-            "email": "richard@gmail.com",
-            "phone": "0912123123"
-        },
-        {
-            "id": 3,
-            "name": "Beck",
-            "image": "https://freenice.net/wp-content/uploads/2021/08/hinh-anh-avatar-dep.jpg",
-            "email": "beck@gmail.com",
-            "phone": "0912123121"
-        }
-    ]
+  "todos": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "delectus aut autem",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "quis ut nam facilis et officia qui",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "fugiat veniam minus",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 4,
+      "title": "et porro tempora",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "aaaaaaaa"
+    },
+    {
+      "id": 6,
+      "title": "bbbbbbb"
+    },
+    {
+      "id": 7,
+      "title": "ccccc"
+    }
+  ],
+  "books": [
+    {
+      "id": 2,
+      "title": "book number two",
+      "quantity": 100
+    },
+    {
+      "id": 3,
+      "title": "book number three",
+      "quantity": 120
+    },
+    {
+      "id": 4,
+      "title": "aaaaa",
+      "quantity": "12332"
+    },
+    {
+      "id": 5,
+      "title": "fdsfsd",
+      "quantity": "22"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 2,
+      "name": "Richardzzzz",
+      "image": "https://antimatter.vn/wp-content/uploads/2023/01/hinh-anh-avatar-dep-cute-ngau-601x600.jpg",
+      "email": "richard@gmail.com",
+      "phone": "0912123123444"
+    },
+    {
+      "id": 3,
+      "name": "Beck",
+      "image": "https://freenice.net/wp-content/uploads/2021/08/hinh-anh-avatar-dep.jpg",
+      "email": "beck@gmail.com",
+      "phone": "0912123121"
+    }
+  ]
 }

@@ -57,3 +57,5 @@ yarn-error.log*
 /API-Clients/bt2-quan-ly-sach/node_modules
 /API-Clients/bt3-quan-ly-danh-ba/node_modules
 /json-server/node_modules
+/React-Form/bt2-ung-dung-quan-ly-sach/node_modules
+/API-Clients/bt4-quan-ly-user/node_modules
