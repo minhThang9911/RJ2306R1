@@ -42,6 +42,9 @@ export default function BookList() {
             console.log(res);
             if (res.status === 200) {
                 setBookList(bookList.filter((book) => book.id !== id));
+                alert(
+                    `Status Code: ${res.status}, Status text: ${res.statusText} Delete success!!`
+                );
             }
         })().catch((e) => {
             console.log(e);

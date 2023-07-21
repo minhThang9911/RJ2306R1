@@ -43,7 +43,7 @@ export default function NewBook() {
                     book
                 );
             }
-            console.log(res);
+            alert(`Status Code: ${res.status}, Status text: ${res.statusText}`);
             statusCode = res.status;
             if (statusCode === 200 || statusCode === 201) {
                 navigate("/", { state: book });
@@ -54,7 +54,7 @@ export default function NewBook() {
     };
     return (
         <div className="add-box">
-            <h1>Add a new book</h1>
+            <h1>{isEditting ? "Edit" : "Add a new book"}</h1>
             <input
                 name="id"
                 value={book.id}
@@ -76,7 +76,7 @@ export default function NewBook() {
             <button
                 className="btn btn-add"
                 onClick={handleAdd}>
-                {isEditting ? "Edit" : "Add"}
+                {isEditting ? "Save" : "Add"}
             </button>
         </div>
     );
