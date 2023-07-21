@@ -1,4 +1,83 @@
-import "./NewBook.css";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
 export default function NewBook() {
-	return <div></div>;
+    const [book, setBook] = useState({
+        id: 0,
+        title: "",
+        quantity: "",
+    });
+    const [isEditting, setIsEditting] = useState(false);
+    const { state: edditedBook } = useLocation();
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (edditedBook.title) {
+            setBook(edditedBook);
+            setIsEditting(true);
+        } else {
+            setBook({
+                id: +edditedBook.id,
+            });
+        }
+    }, [edditedBook]);
+
+    const handleChange = (e) => {
+        setBook((pre) => ({
+            ...pre,
+            [e.target.name]: e.target.value,
+        }));
+    };
+    const handleAdd = () => {
+        (async () => {
+            let statusCode = 404;
+            let res;
+            if (isEditting) {
+                res = await axios.put(
+                    `https://my-json-server.typicode.com/codegym-vn/mock-api-books/books/${book.id}`,
+                    book
+                );
+            } else {
+                res = await axios.post(
+                    `https://my-json-server.typicode.com/codegym-vn/mock-api-books/books`,
+                    book
+                );
+            }
+            console.log(res);
+            statusCode = res.status;
+            if (statusCode === 200 || statusCode === 201) {
+                navigate("/", { state: book });
+            }
+        })().catch((e) => {
+            console.log(e);
+        });
+    };
+    return (
+        <div className="add-box">
+            <h1>Add a new book</h1>
+            <input
+                name="id"
+                value={book.id}
+                onChange={handleChange}
+                hidden
+            />
+            <h3>Title</h3>
+            <input
+                name="title"
+                value={book.title}
+                onChange={handleChange}
+            />
+            <h3>Quantity</h3>
+            <input
+                name="quantity"
+                value={book.quantity}
+                onChange={handleChange}
+            />
+            <button
+                className="btn btn-add"
+                onClick={handleAdd}>
+                {isEditting ? "Edit" : "Add"}
+            </button>
+        </div>
+    );
 }
