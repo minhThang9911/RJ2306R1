@@ -55,3 +55,5 @@ yarn-error.log*
 /API-Clients/th6-lay-danh-sach-user-axio/node_modules
 /API-Clients/bt1-todo-list/node_modules
 /API-Clients/bt2-quan-ly-sach/node_modules
+/API-Clients/bt3-quan-ly-danh-ba/node_modules
+/json-server/node_modules

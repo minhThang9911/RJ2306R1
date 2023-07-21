@@ -1,17 +1,17 @@
 import { Route, Routes } from "react-router-dom";
-import Login from "./components/Login";
-import Home from "./components/Home";
+import Contacts from "./pages/Contacts";
+import AddContacts from "./pages/AddContacts";
 
 export default function App() {
     return (
         <Routes>
             <Route
                 path="/"
-                element={<Login />}
+                element={<Contacts />}
             />
             <Route
-                path="/home"
-                element={<Home />}
+                path="/addcontact/:task/:contactId"
+                element={<AddContacts />}
             />
         </Routes>
     );

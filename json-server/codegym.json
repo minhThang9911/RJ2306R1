@@ -1,0 +1,25 @@
+{
+    "contacts": [
+        {
+            "id": 1,
+            "name": "Peter",
+            "image": "https://i0.wp.com/thatnhucuocsong.com.vn/wp-content/uploads/2023/02/Hinh-anh-avatar-Facebook.jpg?ssl=1",
+            "email": "peter@gmail.com",
+            "phone": "0912123109"
+        },
+        {
+            "id": 2,
+            "name": "Richard",
+            "image": "https://antimatter.vn/wp-content/uploads/2023/01/hinh-anh-avatar-dep-cute-ngau-601x600.jpg",
+            "email": "richard@gmail.com",
+            "phone": "0912123123"
+        },
+        {
+            "id": 3,
+            "name": "Beck",
+            "image": "https://freenice.net/wp-content/uploads/2021/08/hinh-anh-avatar-dep.jpg",
+            "email": "beck@gmail.com",
+            "phone": "0912123121"
+        }
+    ]
+}
