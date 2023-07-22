@@ -47,6 +47,27 @@ body {
 	display: block;
 	margin-top: 2em;
 }
+
+.btn.btn-cancel {
+	background-color: #fcae16;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	margin: 2em 0;
+}
+
+.row > input {
+	flex-grow: 1;
+	font-size: 2em;
+	margin-right: 1em;
+}
+
+.row > .btn {
+	margin: 0.2em;
+}
+
 .add-box > * {
 	margin: 0.4em 0;
 }

@@ -1,29 +1,66 @@
 {
-  "todos": [
+  "articles": [
     {
-      "userId": 1,
       "id": 1,
-      "title": "delectus aut autem",
-      "completed": false
+      "title": "Lorem ipsum dolor sit amet",
+      "user_id": 1
     },
     {
-      "userId": 1,
       "id": 2,
-      "title": "quis ut nam facilis et officia qui",
-      "completed": false
+      "title": "Lorem ipsum dolor sit amet",
+      "user_id": 1
     },
     {
-      "userId": 1,
       "id": 3,
-      "title": "fugiat veniam minus",
-      "completed": false
+      "title": "Lorem ipsum dolor sit ametl",
+      "user_id": 2
     },
     {
-      "userId": 1,
       "id": 4,
-      "title": "et porro tempora",
-      "completed": true
+      "title": "Lorem ipsum dolor sit amet",
+      "user_id": 3
     },
+    {
+      "title": "sssdsda",
+      "id": 5,
+      "user_id": "8"
+    }
+  ],
+  "users": [
+    {
+      "id": 2,
+      "name": "Jennietta"
+    },
+    {
+      "id": 3,
+      "name": "Harry"
+    },
+    {
+      "id": 4,
+      "name": "Beck"
+    },
+    {
+      "id": 5,
+      "name": "Ben"
+    },
+    {
+      "id": "6",
+      "name": "dddds"
+    },
+    {
+      "id": "7",
+      "name": "uuuuu"
+    },
+    {
+      "id": "8",
+      "name": "ffffff"
+    },
+    {
+      "id": "9",
+      "name": "lll"
+    }
+  ],
+  "todos": [
     {
       "id": 5,
       "title": "aaaaaaaa"
