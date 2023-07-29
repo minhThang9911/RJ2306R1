@@ -1,1 +1,1 @@
-.\node_modules\.bin\json-server  --watch codegym.json --port 3005
+.\node_modules\.bin\json-server  --watch codegym.json --port 3005 --routes routes.json

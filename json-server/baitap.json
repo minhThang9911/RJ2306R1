@@ -1,0 +1,13 @@
+{
+	"user": [
+		{ "id": 1, "name": "aaa" },
+		{ "id": 2, "name": "bbbb" }
+	],
+	"comments": [
+		{
+			"id": 1,
+			"content": "ddddd",
+			"user_id ": 1
+		}
+	]
+}
