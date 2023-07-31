@@ -59,3 +59,4 @@ yarn-error.log*
 /json-server/node_modules
 /React-Form/bt2-ung-dung-quan-ly-sach/node_modules
 /API-Clients/bt4-quan-ly-user/node_modules
+/Redux/th1-trien-khai-redux-saga/node_modules
