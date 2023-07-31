@@ -60,3 +60,8 @@ yarn-error.log*
 /React-Form/bt2-ung-dung-quan-ly-sach/node_modules
 /API-Clients/bt4-quan-ly-user/node_modules
 /Redux/th1-trien-khai-redux-saga/node_modules
+/API-Clients/Extra/extra-1/node_modules
+/API-Clients/Extra/extra-ex-1/node_modules
+/Extra/ex1/node_modules
+/Extra/ex-1/node_modules
+/Router/bt2-router-2/node_modules
